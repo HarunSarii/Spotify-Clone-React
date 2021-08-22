@@ -44,6 +44,15 @@ function App() {
 
       })
 
+      spotify.getPlaylist("v9p4z82ssvzp7pto3onvv2qqz").then(response =>
+        dispatch({
+          type: 'SET_DISCOVER_WEEKLY',
+          discover_weekly: response,
+        })
+      )
+
+
+
     }
     console.log('I have a Token:', token)
 
